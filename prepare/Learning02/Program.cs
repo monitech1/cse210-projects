@@ -1,59 +1,54 @@
 using System;
+using System.Collections.Generic;
 
-class Program
+namespace Prep4
 {
-    static void Main(string[] args)
+    class Program
     {
-        bool playAgain;
-
-        do
+        static void Main(string[] args)
         {
-            Random random = new Random();
-            int magicNumber = random.Next(1, 101); // Generate a random number between 1 and 100
-            int numberOfGuesses = 0;
-            int guess;
-
-            Console.WriteLine("Welcome to the Guess My Number game!");
-            Console.WriteLine("I've selected a magic number between 1 and 100.");
-            Console.WriteLine("Try to guess it!");
+            List<int> numbers = new List<int>();
+            int input;
+            
+            Console.WriteLine("Enter a list of numbers, type 0 when finished.");
 
             do
             {
-                Console.Write("Enter your guess (1-100): ");
-                if (int.TryParse(Console.ReadLine(), out guess))
+                Console.Write("Enter number: ");
+                input = Convert.ToInt32(Console.ReadLine());
+
+                if (input != 0)
                 {
-                    if (guess < 1 || guess > 100)
-                    {
-                        Console.WriteLine("Please enter a number between 1 and 100.");
-                    }
-                    else if (guess < magicNumber)
-                    {
-                        Console.WriteLine("Higher");
-                    }
-                    else if (guess > magicNumber)
-                    {
-                        Console.WriteLine("Lower");
-                    }
-                    else
-                    {
-                        Console.WriteLine("You guessed it!");
-                    }
-
+                    numbers.Add(input);
                 }
-                else
+            } while (input != 0);
+
+            if (numbers.Count > 0)
+            {
+                int sum = 0;
+                int max = numbers[0];
+                
+                foreach (int num in numbers)
                 {
-                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    sum += num;
+                    if (num > max)
+                    {
+                        max = num;
+                    }
                 }
-            } while (guess != magicNumber);
 
-            Console.WriteLine($"It took you {numberOfGuesses} guesses to find the magic number.");
-            Console.Write("Do you want to play again? (yes/no): ");
-            string playAgainResponse = Console.ReadLine().ToLower();
+                double average = (double)sum / numbers.Count;
 
-            playAgain = (playAgainResponse == "yes");
+                Console.WriteLine("The sum is: " + sum);
+                Console.WriteLine("The average is: " + average);
+                Console.WriteLine("The largest number is: " + max);
+            }
+            else
+            {
+                Console.WriteLine("No numbers entered.");
+            }
 
-        } while (playAgain);
-
-        Console.WriteLine("Thanks for playing! Goodbye!");
+            Console.ReadLine();
+        }
     }
 }
