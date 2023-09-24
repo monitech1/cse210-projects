@@ -1,54 +1,54 @@
 using System;
+using System.Collections.Generic;
 
-namespace Prep5
+namespace Prep4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Display welcome message
-            DisplayWelcome();
+            List<int> numbers = new List<int>();
+            int input;
+            
+            Console.WriteLine("Enter a list of numbers, type 0 when finished.");
 
-            // Prompt user for their name
-            string userName = PromptUserName();
+            do
+            {
+                Console.Write("Enter number: ");
+                input = Convert.ToInt32(Console.ReadLine());
 
-            // Prompt user for their favorite number
-            int userNumber = PromptUserNumber();
+                if (input != 0)
+                {
+                    numbers.Add(input);
+                }
+            } while (input != 0);
 
-            // Calculate the square of the number
-            int squaredNumber = SquareNumber(userNumber);
+            if (numbers.Count > 0)
+            {
+                int sum = 0;
+                int max = numbers[0];
+                
+                foreach (int num in numbers)
+                {
+                    sum += num;
+                    if (num > max)
+                    {
+                        max = num;
+                    }
+                }
 
-            // Display the result
-            DisplayResult(userName, squaredNumber);
+                double average = (double)sum / numbers.Count;
+
+                Console.WriteLine("The sum is: " + sum);
+                Console.WriteLine("The average is: " + average);
+                Console.WriteLine("The largest number is: " + max);
+            }
+            else
+            {
+                Console.WriteLine("No numbers entered.");
+            }
 
             Console.ReadLine();
-        }
-
-        static void DisplayWelcome()
-        {
-            Console.WriteLine("Welcome to the program!");
-        }
-
-        static string PromptUserName()
-        {
-            Console.Write("Please enter your name: ");
-            return Console.ReadLine();
-        }
-
-        static int PromptUserNumber()
-        {
-            Console.Write("Please enter your favorite number: ");
-            return Convert.ToInt32(Console.ReadLine());
-        }
-
-        static int SquareNumber(int number)
-        {
-            return number * number;
-        }
-
-        static void DisplayResult(string userName, int squaredNumber)
-        {
-            Console.WriteLine($"{userName}, the square of your number is {squaredNumber}");
         }
     }
 }
