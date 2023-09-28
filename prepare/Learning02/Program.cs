@@ -1,54 +1,33 @@
 using System;
-using System.Collections.Generic;
 
-namespace Prep4
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Job job1 = new Job
         {
-            List<int> numbers = new List<int>();
-            int input;
-            
-            Console.WriteLine("Enter a list of numbers, type 0 when finished.");
+            Company = "Microsoft",
+            JobTitle = "Software Engineer",
+            StartYear = 2019,
+            EndYear = 2022
+        };
 
-            do
-            {
-                Console.Write("Enter number: ");
-                input = Convert.ToInt32(Console.ReadLine());
+        Job job2 = new Job
+        {
+            Company = "Apple",
+            JobTitle = "Manager",
+            StartYear = 2022,
+            EndYear = 2023
+        };
 
-                if (input != 0)
-                {
-                    numbers.Add(input);
-                }
-            } while (input != 0);
+        Resume resume = new Resume("Monigan Daniel");
 
-            if (numbers.Count > 0)
-            {
-                int sum = 0;
-                int max = numbers[0];
-                
-                foreach (int num in numbers)
-                {
-                    sum += num;
-                    if (num > max)
-                    {
-                        max = num;
-                    }
-                }
+        resume.Jobs.Add(job1);
+        resume.Jobs.Add(job2);
 
-                double average = (double)sum / numbers.Count;
+        string firstJobTitle = resume.Jobs[0].JobTitle;
+        Console.WriteLine($"First Job Title: {firstJobTitle}");
 
-                Console.WriteLine("The sum is: " + sum);
-                Console.WriteLine("The average is: " + average);
-                Console.WriteLine("The largest number is: " + max);
-            }
-            else
-            {
-                Console.WriteLine("No numbers entered.");
-            }
-
-            Console.ReadLine();
-        }
+        resume.Display();
     }
 }
