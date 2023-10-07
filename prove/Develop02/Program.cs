@@ -98,7 +98,7 @@ class Program
 
         if (File.Exists(fileName))
         {
-            journalEntries.Clear(); 
+            journalEntries.Clear();
             using (StreamReader reader = new StreamReader(fileName))
             {
                 string line;
