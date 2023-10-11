@@ -24,6 +24,7 @@ class Program
             Console.WriteLine("3. Save the journal to a file");
             Console.WriteLine("4. Load the journal from a file");
             Console.WriteLine("5. Exit");
+            Console.WriteLine("6 Thank you for writinng your journal");
 
             int choice = GetUserChoice(1, 5);
 
@@ -139,19 +140,5 @@ class Program
             Console.Write($"Please enter a valid choice ({minValue}-{maxValue}): ");
         }
         return choice;
-    }
-}
-
-class JournalEntry
-{
-    public string Date { get; }
-    public string Prompt { get; }
-    public string Response { get; }
-
-    public JournalEntry(string date, string prompt, string response)
-    {
-        Date = date;
-        Prompt = prompt;
-        Response = response;
     }
 }
