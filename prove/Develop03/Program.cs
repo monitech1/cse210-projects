@@ -23,7 +23,7 @@ class Program
             scripture.Display();
         }
 
-        Console.WriteLine("All words are hidden. Program ended.");
+        Console.WriteLine("All words are hidden here. Program ended.");
     }
 }
 
