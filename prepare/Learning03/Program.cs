@@ -1,8 +1,8 @@
 using System;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         // fractions using different constructors
         Fraction fraction1 = new Fraction(); // 1/1

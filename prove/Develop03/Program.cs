@@ -1,8 +1,8 @@
 using System;
 
-class Program
+internal class Program
 {
-    static void Main()
+    private static void Main()
     {
         // Create a sample scripture
         Scripture scripture = new Scripture("Jacob 6:12", "O be wise; what can I say more?.");

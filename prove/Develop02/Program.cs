@@ -1,9 +1,9 @@
 using System;
 
-class Program
+internal class Program
 {
-    static List<JournalEntry> journalEntries = new List<JournalEntry>();
-    static List<string> prompts = new List<string>
+    private static List<JournalEntry> journalEntries = new List<JournalEntry>();
+    private static List<string> prompts = new List<string>
     {
         "Who was the most interesting person I interacted with today?",
         "What was the best part of my day?",
@@ -12,7 +12,7 @@ class Program
         "If I had one thing I could do over today, what would it be?"
     };
 
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         bool continueRunning = true;
 
@@ -49,7 +49,7 @@ class Program
         }
     }
 
-    static void WriteNewEntry()
+    private static void WriteNewEntry()
     {
         Console.WriteLine("Writing a new entry...");
         string prompt = GetRandomPrompt();
@@ -64,7 +64,7 @@ class Program
         Console.WriteLine("Entry added successfully!");
     }
 
-    static void DisplayJournal()
+    private static void DisplayJournal()
     {
         Console.WriteLine("Journal Entries:");
         foreach (JournalEntry entry in journalEntries)
@@ -76,7 +76,7 @@ class Program
         }
     }
 
-    static void SaveJournalToFile()
+    private static void SaveJournalToFile()
     {
         Console.Write("Enter the filename to save the journal: ");
         string fileName = Console.ReadLine();
@@ -92,7 +92,7 @@ class Program
         Console.WriteLine("Journal saved to file successfully!");
     }
 
-    static void LoadJournalFromFile()
+    private static void LoadJournalFromFile()
     {
         Console.Write("Enter the filename to load the journal: ");
         string fileName = Console.ReadLine();
@@ -125,14 +125,14 @@ class Program
         }
     }
 
-    static string GetRandomPrompt()
+    private static string GetRandomPrompt()
     {
         Random rand = new Random();
         int index = rand.Next(prompts.Count);
         return prompts[index];
     }
 
-    static int GetUserChoice(int minValue, int maxValue)
+    private static int GetUserChoice(int minValue, int maxValue)
     {
         int choice;
         while (!int.TryParse(Console.ReadLine(), out choice) || choice < minValue || choice > maxValue)

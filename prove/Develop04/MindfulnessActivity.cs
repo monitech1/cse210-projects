@@ -1,6 +1,6 @@
 using System;
 
-class MindfulnessActivity
+internal class MindfulnessActivity
 {
     protected int duration;
 

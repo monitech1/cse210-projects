@@ -1,6 +1,6 @@
 using System;
 
-class BreathingActivity : MindfulnessActivity
+internal class BreathingActivity : MindfulnessActivity
 {
     public BreathingActivity(int duration) : base(duration) { }
 

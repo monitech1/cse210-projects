@@ -1,0 +1,5 @@
+The ongoing project involves the development of a comprehensive software system that integrates four distinct programs, each focusing on fundamental principles of object-oriented programming: 
+Abstraction, Encapsulation, Inheritance, and Polymorphism. 
+The project, inspired by the Foundation 4 option in a programming course, includes programs for managing YouTube video data, online ordering, event planning, and exercise tracking.
+ Notably, we have successfully implemented the Abstraction program, creating classes for YouTube videos, encapsulating essential details, and demonstrating methods for calculating statistics and displaying crucial information. 
+Additionally, we have integrated the Encapsulation program, featuring classes for products, customers, addresses, and orders, enforcing private member variables, and providing methods for calculating total costs and generating labels. Our next steps involve addressing Inheritance and Polymorphism principles in the context of event planning and exercise tracking.

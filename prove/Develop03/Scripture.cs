@@ -1,7 +1,6 @@
 using System;
 
-
-class Scripture
+internal class Scripture
 {
     public List<Word> Words { get; private set; }
     public ScriptureReference Reference { get; private set; }

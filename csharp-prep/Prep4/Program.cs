@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Prep4
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             List<int> numbers = new List<int>();
             int input;

@@ -1,6 +1,6 @@
 using System;
 
-class JournalEntry
+internal class JournalEntry
 {
     public string Date { get; }
     public string Prompt { get; }

@@ -1,4 +1,4 @@
-class ScriptureReference
+internal class ScriptureReference
 {
     public string Reference { get; set; }
 

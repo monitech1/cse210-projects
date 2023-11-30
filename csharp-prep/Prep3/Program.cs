@@ -2,9 +2,9 @@ using System;
 
 namespace Prep3
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Random random = new Random();
 

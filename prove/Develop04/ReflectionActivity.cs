@@ -1,6 +1,6 @@
 using System;
 
-class ReflectionActivity : MindfulnessActivity
+internal class ReflectionActivity : MindfulnessActivity
 {
     private List<string> prompts = new List<string>
     {
