@@ -1,0 +1,9 @@
+Description of Foundation 1 program
+
+"In creating the YouTube video program, I made things simpler by using a principle called abstraction.
+ I used two main classes, Video and Comment, to keep things focused on the most important details. 
+ The Video class represents a video in a basic way, highlighting things like the title, author, and length.
+  Likewise, the Comment class takes care of comment details, like the commenter's name and what they wrote. 
+  This made the code easier to handle and understand, making it better overall. 
+  It's now easier to maintain and read, and it highlights the important parts of how the program works.
+ 

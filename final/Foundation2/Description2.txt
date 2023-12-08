@@ -1,0 +1,8 @@
+Description of Foundation 2 program
+
+I organized things in our project to make it easy to handle different parts. We have classes for Product, Order, Customer, and Address.
+ Each class keeps its own secrets, so others don't get confused. The Product class deals with products, like names and prices. 
+ It's like a neat folder for product info. The Order class is all about orders, holding what was bought and who bought it. It helps us figure out the total cost.
+Customers have their own spot with the Customer class. It keeps their names and addresses safe, letting us use that info in a safe way. The Address class is all about addresses,
+ helping us put them together and checking if they're from the USA.
+This way, our code is tidy and easy to understand. Each part does its own thing without messing with the others, making it simple to work with and use again in the future.
